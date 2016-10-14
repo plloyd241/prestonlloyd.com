@@ -1,0 +1,33 @@
+{
+  "name": "prestonlloyd.com",
+  "version": "0.0.1",
+  "description": "My site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plloyd241/prestonlloyd.com.git"
+  },
+  "author": "Preston Lloyd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plloyd241/prestonlloyd.com/issues"
+  },
+  "homepage": "https://github.com/plloyd241/prestonlloyd.com#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6",
+    "react": "^15.3.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.1.0",
+    "gulp-typescript": "^3.0.2",
+    "gulp-uglify": "^2.0.0",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
+  }
+}
