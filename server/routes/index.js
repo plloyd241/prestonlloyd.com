@@ -1,6 +1,6 @@
 'use strict';
-var Route;
-(function (Route) {
+var Controller;
+(function (Controller) {
     var Index = (function () {
         function Index() {
         }
@@ -9,6 +9,6 @@ var Route;
         };
         return Index;
     }());
-    Route.Index = Index;
-})(Route || (Route = {}));
-module.exports = Route;
+    Controller.Index = Index;
+})(Controller || (Controller = {}));
+module.exports = Controller;

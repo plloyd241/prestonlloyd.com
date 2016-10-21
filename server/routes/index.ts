@@ -2,7 +2,7 @@
 
 import * as express from 'express';
 
-module Route {
+module Controller {
 
   export class Index {
 
@@ -14,4 +14,4 @@ module Route {
 
 }
 
-export = Route;
+export = Controller;
