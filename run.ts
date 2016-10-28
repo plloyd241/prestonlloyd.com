@@ -2,6 +2,6 @@
 
 import { Server }  from './server/server';
 
-const app = Server.bootstrap();
+const app = new Server();
 
 app.start();

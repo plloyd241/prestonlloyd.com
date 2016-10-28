@@ -24,10 +24,13 @@ export class Server {
   }
 
   private config(): void {
-    let data: any = fs.readFileSync('./server/config.json');
+    let data: any = fs.readFileSync('./config.json');
     let config = JSON.parse(data);
 
     this.port = config['port'];
+
+    this.app.set('views', __dirname + '/views');
+    this.app.set('view engine', 'pug');
   }
 
   private routes(): void {
