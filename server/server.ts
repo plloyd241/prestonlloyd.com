@@ -24,10 +24,7 @@ export class Server {
   }
 
   private config(): void {
-    let data: any = fs.readFileSync('./config.json');
-    let config = JSON.parse(data);
-
-    this.port = config['port'];
+    this.port = process.env['APP_PORT'];
 
     this.app.set('views', __dirname + '/views');
     this.app.set('view engine', 'pug');
