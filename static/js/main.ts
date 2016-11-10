@@ -5,3 +5,5 @@ class Main {
     console.log('do something');
   }
 }
+
+let main = new Main();

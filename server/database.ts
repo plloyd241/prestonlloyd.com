@@ -1,17 +1,27 @@
+import * as pgp from 'pg-promise';
 
+interface DatabaseConfig {
+  database: string;
+  username: string;
+  password: string;
+  host: string;
+  port: number;
+}
 
 class Database {
-  protected database: string;
-  protected username: string;
-  protected password: string;
-  protected port: number;
+  protected config: DatabaseConfig;
 
-  constructor() {}
+  constructor() {
+    this.initConfig();
+  }
 
-  private config() {
-    this.database = process.env['DB_NAME'];
-    this.username = process.env['DB_USER'];
-    this.password = process.env['DB_PASS'];
-    this.port = process.env['DB_PORT'];
+  private initConfig() {
+    this.config = {
+      database: process.env['POSTGRES_DB'],
+      username: process.env['POSTGRES_USER'],
+      password: process.env['POSTGRES_PASSWORD'],
+      host: process.env['POSTGRES_HOST'],
+      port: process.env['POSTGRES_PORT']
+    }
   }
 }

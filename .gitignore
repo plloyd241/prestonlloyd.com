@@ -1,5 +1,6 @@
 # Javascript
 *.js
+*.css
 
 # Logs
 logs

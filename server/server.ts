@@ -28,6 +28,8 @@ export class Server {
 
     this.app.set('views', __dirname + '/views');
     this.app.set('view engine', 'pug');
+
+    this.app.use('/static', express.static(__dirname + '../static'));
   }
 
   private routes(): void {
@@ -42,7 +44,7 @@ export class Server {
 
   public start(): void {
     this.app.listen(this.port, () => {
-      console.log('App started and listening on port ' + this.port);
+      console.log('App listening on port ' + this.port);
     });
   }
 
