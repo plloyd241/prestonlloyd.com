@@ -23,6 +23,7 @@
     "react": "^15.3.2"
   },
   "devDependencies": {
+    "bulma": "^0.2.3",
     "gulp": "^3.9.1",
     "gulp-ruby-sass": "^2.1.0",
     "gulp-typescript": "^3.0.2",
