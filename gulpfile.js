@@ -21,10 +21,9 @@ gulp.task('tsc', () => {
 });
 
 gulp.task('sass', () => {
-  return gulp.src('./static/css/**/*scss')
+  return gulp.src('./static/css/**/*.scss')
   .pipe(srcmaps.init())
   .pipe(sass({
-    outputStyle: 'compressed',
     includePaths: ['./node_modules/bulma']
   }).on('error', sass.logError))
   .pipe(srcmaps.write())
@@ -32,7 +31,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('./static/ts/**/*.ts', ['tsc']);
-  gulp.watch('./static/ts/**/*.tsx', ['tsc']);
-  gulp.watch('./static/sass/**/*.scss', ['sass']);
+  gulp.watch('./static/js/**/*.ts', ['tsc']);
+  gulp.watch('./static/js/**/*.tsx', ['tsc']);
+  gulp.watch('./static/css/**/*.scss', ['sass']);
 });

@@ -21,7 +21,8 @@ app.use(express.static(__dirname + '/static'))
 /**
  * Routes
  */
-app.get('/', routes.index);
+app.get('/', routes.landing);
+app.get('/home/', routes.index);
 app.get('/about/', routes.about);
 
 /**
